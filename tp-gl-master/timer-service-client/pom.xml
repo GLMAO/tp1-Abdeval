@@ -14,5 +14,10 @@
             <groupId>org.emp.gl</groupId>
             <version>0.0.1</version>
         </dependency>
+        <dependency>
+            <artifactId>time-service-impl</artifactId>
+            <groupId>org.emp.gl</groupId>
+            <version>0.0.1</version>
+        </dependency>
     </dependencies>
 </project>

@@ -1,6 +1,8 @@
 package org.emp.gl.core.launcher;
 
 import org.emp.gl.clients.Horloge ;
+import org.emp.gl.timer.service.TimerService;
+import org.emp.gl.time.service.impl.DummyTimeServiceImpl;
 
 /**
  * Hello world!
@@ -14,7 +16,11 @@ public class App {
     }
 
     private static void testDuTimeService() {
-        Horloge horloge = new Horloge("Num 1") ;
+        // instancier le service de temps (implémentation fournie)
+        TimerService timer = new DummyTimeServiceImpl();
+
+        // fournir le service à l'horloge (injection de dépendance)
+        Horloge horloge = new Horloge("Num 1", timer);
     }
 
     public static void clearScreen() {
